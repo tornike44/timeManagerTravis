@@ -1,0 +1,7 @@
+{
+  "name": "T-POO-700-NAN-5",
+  "version": "1.0.0",
+  "devDependencies": {
+    "axios": "^0.24.0"
+  }
+}

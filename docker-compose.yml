@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  api:
+    build: ./timeManager
+    env_file:
+      - timeManager/.env
+    ports:
+      - "4000:4000"
+  db:
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    env_file:
+      - .env
+    volumes:
+      - pgvolume:/volume/path
+  front:
+    build: ./theme02
+    ports:
+      - "8080:8080"
+volumes:
+  pgvolume:
